@@ -44,13 +44,13 @@ app.get("/completed",async function(req,res){
     await todo.update(
         {
             _id:req.body.id
-        },
-        {
+        },{
             completed:true
-        })
+        }
+    )
         res.json({
             msg:"Todo marked as completed"
         })
 })
 
-app.listen(3000)
+app.listen(3000) 
